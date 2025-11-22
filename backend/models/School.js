@@ -83,8 +83,6 @@ const schoolSchema = new mongoose.Schema({
 });
 
 // Index for efficient queries
-schoolSchema.index({ name: 'text', description: 'text' });
-schoolSchema.index({ code: 1 });
 schoolSchema.index({ 'address.city': 1, 'address.state': 1 });
 
 // Virtual for full address
